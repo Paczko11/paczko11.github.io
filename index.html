@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bombel Linux — Pobierz system</title>
+    <meta name="description" content="Poznaj Bombel Linux. Wybierz edycję i pobierz system.">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<header class="topbar">
+    <a href="#" class="brand">
+        <span class="brand-icon">🐧</span>
+        <span>Bombel Linux</span>
+    </a>
+
+    <nav class="nav" id="nav">
+        <a href="#pobierz">Pobierz</a>
+        <a href="#funkcje">Funkcje</a>
+        <a href="#galeria">Zrzuty</a>
+        <a href="#wymagania">Wymagania</a>
+        <a href="#kontakt">Discord</a>
+    </nav>
+
+    <div class="top-actions">
+        <button id="theme-toggle" class="icon-button"
+                aria-label="Zmień motyw">
+            🌙
+        </button>
+
+        <button id="menu-toggle" class="icon-button menu-toggle"
+                aria-label="Otwórz menu"
+                aria-expanded="false">
+            ☰
+        </button>
+    </div>
+</header>
+
+<main>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="eyebrow">
+                🐧 Twój system, Twoje zasady
+            </div>
+
+            <h1>Bombel Linux</h1>
+
+            <p class="hero-description">
+                Poznaj system stworzony do codziennego korzystania,
+                nauki i odkrywania świata Linuxa.
+            </p>
+
+            <div class="hero-actions">
+                <a href="#pobierz" class="button button-primary">
+                    ⬇ Pobierz system
+                </a>
+
+                <a href="#funkcje" class="button button-secondary">
+                    ✨ Poznaj funkcje
+                </a>
+            </div>
+
+            <div class="hero-note">
+                💻 System dla komputerów 64-bitowych
+            </div>
+        </div>
+
+        <div class="hero-card">
+            <div class="hero-card-top">
+                <span>🐧</span>
+                <span class="status-badge">Bombel Linux</span>
+            </div>
+
+            <div class="hero-terminal">
+                <div class="terminal-dots">
+                    <span></span><span></span><span></span>
+                </div>
+
+                <p><span class="terminal-green">user@bombel</span>:~$ fastfetch</p>
+
+                <pre>
+   .----.
+  /      \
+ |  o  o  |   OS: Bombel Linux
+ |   __   |   Kernel: Linux
+  \  --  /    Shell: bash
+   '----'     Desktop: GNOME
+                </pre>
+
+                <p class="terminal-prompt">
+                    <span class="terminal-green">user@bombel</span>:~$
+                    <span class="cursor">▋</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-grid">
+        <article class="stat-card">
+            <div class="stat-icon">📦</div>
+            <div class="stat-label">Dostępne edycje</div>
+            <div class="stat-value">3</div>
+        </article>
+
+        <article class="stat-card">
+            <div class="stat-icon">💻</div>
+            <div class="stat-label">Architektura</div>
+            <div class="stat-value">x86_64</div>
+        </article>
+
+        <article class="stat-card">
+            <div class="stat-icon">🔓</div>
+            <div class="stat-label">Licencja</div>
+            <div class="stat-value">Open Source</div>
+        </article>
+
+        <article class="stat-card">
+            <div class="stat-icon">🌐</div>
+            <div class="stat-label">Społeczność</div>
+            <div class="stat-value">Discord</div>
+        </article>
+    </section>
+
+    <section class="section" id="pobierz">
+        <div class="section-heading">
+            <div>
+                <div class="eyebrow">📥 Pobieranie</div>
+                <h2>Wybierz swoją edycję</h2>
+                <p>Wybierz środowisko graficzne, które Ci odpowiada.</p>
+            </div>
+        </div>
+
+        <div class="edition-grid">
+
+            <button class="edition-card active"
+                    data-edition="gnome"
+                    aria-pressed="true">
+                <span class="edition-icon">🖥️</span>
+                <span class="edition-name">GNOME</span>
+                <span class="edition-description">
+                    Nowoczesny i prosty pulpit.
+                </span>
+                <span class="edition-select">✓ Wybrana edycja</span>
+            </button>
+
+            <button class="edition-card"
+                    data-edition="kde"
+                    aria-pressed="false">
+                <span class="edition-icon">🎨</span>
+                <span class="edition-name">KDE Plasma</span>
+                <span class="edition-description">
+                    Duże możliwości personalizacji.
+                </span>
+                <span class="edition-select">Wybierz edycję</span>
+            </button>
+
+            <button class="edition-card"
+                    data-edition="xfce"
+                    aria-pressed="false">
+                <span class="edition-icon">⚡</span>
+                <span class="edition-name">XFCE</span>
+                <span class="edition-description">
+                    Klasyczny i lekki pulpit.
+                </span>
+                <span class="edition-select">Wybierz edycję</span>
+            </button>
+
+        </div>
+
+        <div class="download-panel">
+            <div class="download-info">
+                <div class="download-icon">📀</div>
+
+                <div>
+                    <h3 id="selected-edition">Bombel Linux GNOME</h3>
+                    <p id="edition-description">
+                        Nowoczesny i prosty pulpit.
+                    </p>
+                    <span class="download-meta">
+                        ISO • 64-bit • Rozmiar do uzupełnienia
+                    </span>
+                </div>
+            </div>
+
+            <div class="download-actions">
+                <a href="#" id="main-iso-btn"
+                   class="button button-primary"
+                   aria-disabled="true">
+                    ⬇ Pobierz ISO
+                </a>
+
+                <a href="#" id="main-torrent-btn"
+                   class="button button-secondary"
+                   aria-disabled="true">
+                    🧲 Torrent
+                </a>
+            </div>
+
+            <div class="checksum-box">
+                <div>
+                    <span class="checksum-label">🔐 SHA-256</span>
+                    <code id="sha-val">Brak sumy kontrolnej</code>
+                </div>
+
+                <button id="copy-sha" class="small-button">
+                    📋 Kopiuj
+                </button>
+            </div>
+
+            <div class="checksum-box">
+                <div>
+                    <span class="checksum-label">💻 Komenda pobierania</span>
+                    <code id="wget-val">wget ADRES_ISO</code>
+                </div>
+
+                <button id="copy-wget" class="small-button">
+                    📋 Kopiuj
+                </button>
+            </div>
+
+            <div class="checksum-verifier">
+                <label for="file-input">
+                    🛡️ Sprawdź pobrany plik ISO
+                </label>
+
+                <input type="file" id="file-input" accept=".iso">
+
+                <p id="checksum-result" class="result" aria-live="polite"></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="funkcje">
+        <div class="section-heading">
+            <div>
+                <div class="eyebrow">✨ Możliwości</div>
+                <h2>Co znajdziesz w systemie?</h2>
+                <p>Najważniejsze informacje o Bombel Linux.</p>
+            </div>
+        </div>
+
+        <div class="feature-grid">
+            <article class="feature-card">
+                <span class="feature-icon">🖥️</span>
+                <h3>Środowisko graficzne</h3>
+                <p>Wybierz pulpit dopasowany do swoich potrzeb.</p>
+            </article>
+
+            <article class="feature-card">
+                <span class="feature-icon">📦</span>
+                <h3>Aplikacje</h3>
+                <p>Miejsce na informacje o dostępnych programach.</p>
+            </article>
+
+            <article class="feature-card">
+                <span class="feature-icon">⚙️</span>
+                <h3>Personalizacja</h3>
+                <p>Dostosuj wygląd systemu do własnych upodobań.</p>
+            </article>
+
+            <article class="feature-card">
+                <span class="feature-icon">🛡️</span>
+                <h3>Bezpieczeństwo</h3>
+                <p>Sprawdź sumę kontrolną pobranego obrazu ISO.</p>
+            </article>
+
+            <article class="feature-card">
+                <span class="feature-icon">💻</span>
+                <h3>Terminal</h3>
+                <p>Poznaj podstawowe komendy i ucz się Linuxa.</p>
+            </article>
+
+            <article class="feature-card">
+                <span class="feature-icon">🌐</span>
+                <h3>Społeczność</h3>
+                <p>Porozmawiaj z innymi użytkownikami projektu.</p>
+            </article>
+        </div>
+    </section>
+
+    <section class="section" id="wymagania">
+        <div class="section-heading">
+            <div>
+                <div class="eyebrow">💻 Sprzęt</div>
+                <h2>Wymagania systemowe</h2>
+                <p>Sprawdź wymagania przed instalacją.</p>
+            </div>
+        </div>
+
+        <div class="requirements-grid">
+            <article class="requirement-card">
+                <h3>📋 Minimalne</h3>
+
+                <ul>
+                    <li><span>Procesor</span><strong>64-bit</strong></li>
+                    <li><span>Pamięć RAM</span><strong>Do uzupełnienia</strong></li>
+                    <li><span>Dysk</span><strong>Do uzupełnienia</strong></li>
+                    <li><span>Grafika</span><strong>Do uzupełnienia</strong></li>
+                </ul>
+            </article>
+
+            <article class="requirement-card">
+                <h3>🚀 Zalecane</h3>
+
+                <ul>
+                    <li><span>Procesor</span><strong>Do uzupełnienia</strong></li>
+                    <li><span>Pamięć RAM</span><strong>Do uzupełnienia</strong></li>
+                    <li><span>Dysk</span><strong>Do uzupełnienia</strong></li>
+                    <li><span>Grafika</span><strong>Do uzupełnienia</strong></li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+    <section class="section" id="galeria">
+        <div class="section-heading">
+            <div>
+                <div class="eyebrow">🖼️ Wygląd</div>
+                <h2>Zrzuty ekranu</h2>
+                <p>Zobacz, jak wygląda Bombel Linux.</p>
+            </div>
+        </div>
+
+        <div class="gallery-grid">
+            <article class="gallery-card">
+                <div class="gallery-placeholder">🖥️</div>
+                <p>Pulpit główny</p>
+            </article>
+
+            <article class="gallery-card">
+                <div class="gallery-placeholder">💻</div>
+                <p>Terminal</p>
+            </article>
+
+            <article class="gallery-card">
+                <div class="gallery-placeholder">⚙️</div>
+                <p>Ustawienia</p>
+            </article>
+        </div>
+    </section>
+
+    <section class="section" id="kontakt">
+        <div class="discord-panel">
+            <div>
+                <div class="eyebrow">💬 Społeczność</div>
+                <h2>Dołącz do Discorda</h2>
+                <p>
+                    Masz pytania lub chcesz śledzić rozwój projektu?
+                    Odwiedź nasz serwer.
+                </p>
+            </div>
+
+            <a href="#" id="discord-link"
+               class="button button-primary"
+               aria-disabled="true">
+                💬 Discord
+            </a>
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <div class="footer-brand">🐧 Bombel Linux</div>
+    <p>Projekt społecznościowy • Open Source</p>
+    <a href="#pobierz">Wróć na górę ↑</a>
+</footer>
+
+<div id="toast-container" class="toast-container"
+     aria-live="polite"></div>
+
+</body>
+</html>
